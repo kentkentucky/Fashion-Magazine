@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Homepage</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <header>
+      <!-- div class for navigation for styling -->
+      <div class="navbar">
+        <!-- logo image -->
+        <div class="logo">
+          <a href="index.html"
+            ><img
+              src="images/book logo.png"
+              alt="website logo"
+              height="100%"
+              width="100%"
+          /></a>
+        </div>
+        <!-- different sections for navigation bar -->
+        <ul class="categories">
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="#">Releases</a></li>
+        </ul>
+        <!-- icons on the right of navigation bar -->
+        <div class="icons">
+          <svg
+            class="user"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
+          <a href="cart.html"
+            ><svg
+              class="cart"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+              />
+            </svg>
+          </a>
+          <svg
+            class="searchbar"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+        </div>
+      </div>
+      <!-- hamburger icon -->
+      <div class="hamburger">
+        <svg
+          class="bars"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+        <svg
+          class="cross"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+
+        <!-- slide out menu -->
+        <ul data-visible="false">
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="#">Releases</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- featured section at the top -->
+    <div class="featured">
+      <!-- create a picture and title for main article -->
+      <article class="main">
+        <img src="images/green nike shoe.jpg" alt="image of nike shoe" />
+        <h1>Step Into The Future: Unveiling The Latest Nike Shoe Collection</h1>
+      </article>
+      <!-- create sub articles at the side -->
+      <article class="sub1">
+        <img src="images/runway.jpg" alt="FW22 Runway Show" />
+        <h1>Closer Look At Fall/Winter 2022 Collection, Runway Show</h1>
+      </article>
+      <article class="sub2">
+        <img src="images/hypebeast magazine.jpg" alt="hypebeast magazine" />
+        <h1>Check Out The Latest Hypebeast Magazine</h1>
+      </article>
+    </div>
+
+    <!-- create a lastest section -->
+    <div class="latest">
+      <h1>Latest</h1>
+      <!-- create a article -->
+      <article class="article1">
+        <a href="article.html"
+          ><img src="images/fossil watch.jpg" alt="picture of fossil watch"
+        /></a>
+        <!-- create wrapper for title and article to place them in the same box -->
+        <div class="wrapper1">
+          <a href="article.html"
+            ><h1>Fossil Introduces The New Fossil XTZ Timepiece</h1></a
+          >
+          <a href="article.html"
+            ><p>
+              Fossil, a renowned name in the world of horology, has once again
+              taken the watch industry by storm with its latest offering - the
+              Fossil XTZ Timepiece. This eagerly awaited addition to their
+              collection has already generated significant buzz among watch
+              enthusiasts and fashion aficionados alike. The Fossil XTZ is set
+              to redefine what a modern timepiece can be, combining cutting-edge
+              technology with timeless design.
+            </p>
+            <p>
+              One of the standout features of the Fossil XTZ Timepiece is its
+              exceptional build quality. Crafted with precision and attention to
+              detail, the watch boasts a durable stainless steel case and
+              bracelet that exude elegance and robustness. Its scratch-resistant
+              sapphire crystal ensures that the watch face remains pristine,
+              even after years of daily wear. The design is sleek and
+              minimalist, making it a versatile accessory suitable for both
+              formal occasions and everyday wear. Fossil's commitment to quality
+              and craftsmanship shines through in every aspect of the XTZ
+              Timepiece.
+            </p>
+            <p>
+              Beyond its stunning exterior, the Fossil XTZ is a true
+              technological marvel. It comes equipped with a range of smart
+              features, including fitness tracking, notifications, and
+              compatibility with popular mobile platforms. This means you can
+              stay connected and organized on the go while still enjoying the
+              timeless appeal of a classic wristwatch. With its impressive
+              battery life and water-resistant design, the Fossil XTZ is not
+              just a fashion statement; it's a practical and reliable companion
+              for modern life. Fossil has once again proven that they are at the
+              forefront of innovation in the watch industry with the
+              introduction of the XTZ Timepiece, a must-have for anyone seeking
+              the perfect blend of style and functionality.
+            </p>
+          </a>
+        </div>
+      </article>
+      <!-- create a article -->
+      <article class="article1">
+        <img src="images/kaws bearbrick.jpg" alt="picture of kaws bearbrick" />
+        <!-- create wrapper for title and article to place them in the same box -->
+        <div class="wrapper1">
+          <h1>KAWS Reunited With UNIQLO To Reveal UT Collaboration</h1>
+          <p>
+            Iconic contemporary artist KAWS has reunited with global fashion
+            retailer UNIQLO to unveil their highly anticipated UT collaboration.
+            Building on the tremendous success of their previous partnerships,
+            this latest collection promises to be a visual feast for fans of
+            both art and fashion. Known for his signature reinterpretation of
+            pop culture icons, KAWS brings his distinctive style to life in this
+            new range of graphic tees and apparel. The UT collaboration blends
+            KAWS' playful yet thought-provoking designs with UNIQLO's commitment
+            to quality and affordability, making these wearable pieces of art
+            accessible to a broad audience. With a fusion of vibrant colors and
+            iconic characters, this collection is set to make a bold statement
+            in the world of streetwear and art-inspired fashion. Art and fashion
+            enthusiasts alike are eagerly awaiting the release of this exciting
+            collaboration, which is sure to become a cultural sensation.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- create a popular article section -->
+    <div class="popular">
+      <!-- header -->
+      <h1>Popular</h1>
+      <!-- add handlebar js script -->
+      <script id="article-template" type="text/x-handlebars-template">
+        <article class="article1">
+          <!-- add {{data}} according to array name and data -->
+          <img src="{{imageURL}}" alt="{{altText}}" />
+          <div class="wrapper1">
+            <h1>{{title}}</h1>
+            <p>{{content}}</p>
+          </div>
+        </article>
+      </script>
+    </div>
+    <!-- add js -->
+    <script src="article-handlebar.js"></script>
+
+    <!-- create footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Sections</h4>
+            <ul>
+              <li><a href="#">Latest</a></li>
+              <li><a href="#">Popular</a></li>
+              <li><a href="videos.html">Video</a></li>
+              <li><a href="#">Releases</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Brands</h4>
+            <ul>
+              <li><a href="#">Brand Rankings</a></li>
+              <li><a href="#">Brand Directory</a></li>
+              <li><a href="#">HypeIndex</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Store</h4>
+            <ul>
+              <li><a href="#">HBX</a></li>
+              <li><a href="#">SSENSE</a></li>
+              <li><a href="#">GRAILED</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Corporate News</a></li>
+              <li><a href="#">Jobs</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

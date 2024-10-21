@@ -1,0 +1,1583 @@
+* {
+  /* font for web page */
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: left;
+  /* delete white spaces around */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background colour */
+  background-color: #222;
+}
+
+/* home page */
+.navbar {
+  /* create flex box for navigation bar */
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+  background-color: #222;
+  font-weight: 600;
+  border-bottom: 2px solid #333;
+  z-index: 2;
+}
+
+.navbar .categories {
+  /* create flex box for the categories */
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  flex-grow: 4;
+  padding-left: 1vw;
+}
+
+.navbar .categories > li {
+  /* remove bullet point */
+  list-style: none;
+}
+
+.navbar .categories > li > a {
+  /* remove underline, adjust font size and add color */
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #eee;
+  width: 100%;
+}
+
+/* book logo */
+.navbar .logo > a > img {
+  width: 3vw;
+  height: 2vw;
+}
+
+.navbar .logo > a {
+  top: 1vw;
+  padding-left: 7.5vw;
+}
+
+.navbar .categories > li > a:hover {
+  /* change color when hovering over */
+  color: #444;
+}
+
+/* icons on the right of navigation bar */
+.navbar .icons {
+  flex-grow: 1;
+  display: flex;
+  gap: 5rem;
+}
+
+.navbar .icons .user:hover {
+  color: #444;
+}
+
+.navbar .icons .cart:hover {
+  color: #444;
+}
+
+.navbar .icons .searchbar:hover {
+  color: #444;
+}
+
+.navbar .icons .user {
+  width: 2vw;
+  height: 2vw;
+  color: #eee;
+}
+
+.navbar .icons .cart {
+  width: 2vw;
+  height: 2vw;
+  color: #eee;
+}
+
+.navbar .icons .searchbar {
+  width: 2vw;
+  height: 2vw;
+  color: #eee;
+}
+
+/* sliding menu */
+.hamburger > ul {
+  /* positioning of entire list */
+  position: absolute;
+  top: 6vw;
+  left: 2vw;
+  right: 2vw;
+  width: 90%;
+}
+
+.hamburger {
+  /* create a menu */
+  position: fixed;
+  left: -40vw;
+  top: 0vw;
+  width: 28vw;
+  height: 100%;
+  background-color: #333;
+  transition: all 0.7s ease;
+  z-index: 3;
+}
+
+.hamburger > ul > li {
+  /* create sections */
+  text-transform: uppercase;
+  list-style: none;
+  padding: 1vw 2vw 3vw 2vw;
+  border-bottom: 1pt solid #444;
+  background-color: #333;
+}
+
+.hamburger > ul > li > a {
+  /* attributes of link */
+  color: #eee;
+  text-align: left;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.hamburger > ul > li > a:hover {
+  /* change color when hovering */
+  color: #444;
+}
+
+.hamburger .bars {
+  /* hamburger icon attributes */
+  position: fixed;
+  top: 0.8vw;
+  left: 3.5vw;
+  width: 2.5vw;
+  height: 2.5vw;
+  color: #eee;
+  background-color: transparent;
+}
+
+.hamburger .cross {
+  /* cross to exit menu bar */
+  position: fixed;
+  top: 1.2vw;
+  left: -24vw;
+  width: 2vw;
+  height: 2vw;
+  color: #eee;
+  transition: all 0.7s ease;
+  background-color: transparent;
+}
+
+.hamburger .bars:hover {
+  color: #444;
+}
+
+.hamburger .cross:hover {
+  color: #444;
+}
+
+/* featured section of the page */
+.featured {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  border-bottom: 3px solid #333;
+  padding-top: 4.5vw;
+  align-items: center;
+  justify-content: center;
+}
+
+/* main article */
+.featured .main {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+  align-self: center;
+  border-right: 3px solid #333;
+  height: 100%;
+  padding: 2vw 2vw 2vw 2vw;
+}
+
+.featured .main > h1 {
+  color: #eee;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.featured .main > img {
+  width: 55vw;
+  height: 45vw;
+}
+
+/* side article at the top */
+.featured .sub1 {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  place-self: center;
+  padding-bottom: 1vw;
+  border-bottom: 3px solid #333;
+  padding: 2vw 2vw 2vw 2vw;
+}
+
+.featured .sub1 > h1 {
+  color: #eee;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.featured .sub1 > img {
+  width: 35vw;
+  height: 20vw;
+}
+
+/* side article at the bottom */
+.featured .sub2 {
+  grid-row: 2 / 3;
+  grid-column: 2/ 3;
+  place-self: center;
+  padding: 2vw 2vw 2vw 2vw;
+}
+
+.featured .sub2 > h1 {
+  color: #eee;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.featured .sub2 > img {
+  width: 35vw;
+  height: 20vw;
+}
+
+/* latest section displaying articles */
+.latest > h1 {
+  /* attributes for the title of the section */
+  color: #eee;
+  font-weight: 600;
+  font-size: 2rem;
+  border-bottom: 3px solid #333;
+  padding: 1vw;
+}
+
+.article1 {
+  /* create flexbox */
+  display: flex;
+  align-items: flex-start;
+  column-gap: 3vw;
+  padding: 2vw 2vw 2vw 2vw;
+  border-bottom: 3px solid #333;
+  align-content: space-around;
+}
+
+.article1 > a > img {
+  /* image size */
+  width: 40vw;
+  height: 30vw;
+}
+
+.article1 > img {
+    /* image size */
+    width: 40vw;
+    height: 30vw;
+  }
+
+.article1 .wrapper1 {
+  /* colour for text */
+  color: #eee;
+}
+
+.article1 .wrapper1 > a {
+    /* remove underline and change text color */
+  text-decoration: none;
+  color: #eee;
+}
+
+/* change text color to grey when hovering over */
+.article1 .wrapper1 > a:hover {
+  color: #444;
+}
+
+.article1 .wrapper1 > a > h1 {
+  /* font weight and size for article title with padding */
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding-bottom: 1vw;
+}
+
+.article1 .wrapper1 > h1 {
+    /* font weight and size for article title with padding */
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-bottom: 1vw;
+  }
+
+.article1 .wrapper1 > p {
+  /* font weight for article paragraph */
+  font-weight: 400;
+}
+
+/* popular content */
+.popular > h1 {
+  /* title for popular section */
+  color: #eee;
+  font-weight: 600;
+  font-size: 2rem;
+  border-bottom: 3px solid #333;
+  padding: 2vw 2vw 2vw 2vw;
+}
+
+/* footer */
+.footer {
+  /* padding around footer */
+  padding: 2vw;
+  border-top: 3px solid #333;
+}
+
+.footer .container {
+  /* attributes for container */
+  max-width: 100%;
+  margin: auto;
+  background-color: #333;
+}
+
+.footer .container .row {
+  /* create flex box for the different sections */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer .container .row .footer-col > ul {
+  /* remove bullet points */
+  list-style: none;
+}
+
+.footer .container .row .footer-col > ul > li > a {
+  /* remove underline and add colours */
+  text-decoration: none;
+  color: #eee;
+  /* adjust display and transition */
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer .container .row .footer-col > ul > li > a:hover {
+  /* make words move to the right when mouse hovering over and change colour */
+  color: #444;
+  padding-left: 0.5vw;
+}
+
+.footer .container .row .footer-col {
+  /* adjust sections */
+  width: 20%;
+  padding: 0 1vw;
+}
+
+.footer .container .row .footer-col > h4 {
+  /* attributes for the header section */
+  font-size: 1.2rem;
+  color: #eee;
+  margin-bottom: 1vw;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer .container .row .footer-col > h4::before {
+  /* create border */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.5vw;
+  background-color: #333;
+  height: 0.2vw;
+  box-sizing: border-box;
+  width: 6vw;
+}
+
+.footer .container .row .footer-col > ul > li:not(:last-child) {
+  /* spaces between the list */
+  margin-bottom: 0.5vw;
+}
+
+.footer .container .row .footer-col .social > a > i {
+  /* attributes for social handles */
+  display: inline-block;
+  height: 2vw;
+  width: 2vw;
+  background-color: #eee;
+  margin: 0 0.5vw 0.5vw 0;
+  text-align: center;
+  line-height: 2vw;
+  border-radius: 50%;
+  color: #333;
+  transition: all 0.5s ease;
+}
+
+.footer .container .row .footer-col .social > a > i:hover {
+  /* change color and background of social handle when hovering over */
+  color: #eee;
+  background-color: #333;
+}
+
+/* article page */
+.fossil-article {
+  /* create flex box for article */
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  gap: 2vw;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid #333;
+}
+
+.fossil-article > h1 {
+  /* header of article */
+  color: #eee;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-top: 4.5vw;
+}
+
+.fossil-article .carousel-container {
+  /* container for carousel */
+  position: relative;
+  height: 50vw;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.fossil-article .carousel-container .carousel-slider > ul > li > img {
+  /* images for the carousel */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fossil-article .carousel-container .carousel-slider {
+  /* entire images for carousel */
+  padding: 2vw;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.fossil-article .carousel-container .carousel-slider > ul {
+  /* unordered list for carousel */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
+}
+
+.fossil-article .carousel-container .carousel-slider > ul > li {
+  /* individual images for carousel */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.fossil-article .carousel-container .carousel-button-left {
+  /* button on the left to move carousel */
+  color: #eee;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  left: -2vw;
+  cursor: pointer;
+}
+
+.fossil-article .carousel-container .carousel-button-right {
+  /* button on the right to move carousel */
+  color: #eee;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  right: -2vw;
+  cursor: pointer;
+}
+
+.fossil-article .carousel-container .carousel-button-left > svg {
+  /* size of button */
+  width: 2vw;
+}
+
+.fossil-article .carousel-container .carousel-button-right > svg {
+  /* size of button */
+  width: 2vw;
+}
+
+.fossil-article .carousel-container .carousel-nav {
+  /* dots to indicate image slide */
+  display: flex;
+  justify-content: center;
+  padding: 0.1vw 0;
+}
+
+.fossil-article .carousel-container .carousel-nav > button {
+  /* button attributes */
+  border: 0;
+  border-radius: 50%;
+  width: 0.7vw;
+  height: 0.7vw;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0 0.3vw;
+  cursor: pointer;
+}
+
+.fossil-article .carousel-container .carousel-nav .current-slide {
+  /* indicate current slide */
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.is-hidden {
+  /* hide arrows at both ends */
+  display: none;
+}
+
+.fossil-article > p {
+  /* attributes for the paragraph in article */
+  padding-top: 1vw;
+  color: #eee;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.next > h1 {
+  /* Section header attributes */
+  color: #eee;
+  font-weight: 600;
+  font-size: 2rem;
+  border-bottom: 3px solid #333;
+  padding: 2vw 2vw 2vw 2vw;
+}
+
+.next .article2 {
+  /* flex box for article */
+  display: flex;
+  align-items: flex-start;
+  column-gap: 3vw;
+  padding: 2vw 2vw 2vw 2vw;
+  border-bottom: 3px solid #333;
+  align-content: space-around;
+}
+
+.next .article2 > img {
+  /* image size */
+  width: 30vw;
+  height: 20vw;
+}
+
+.next .article2 .wrapper2 {
+  /* colour for text */
+  color: #eee;
+}
+
+.next .article2 .wrapper2 > h1 {
+  /* font weight and size for article title with padding */
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding-bottom: 1vw;
+}
+
+.next .article2 .wrapper2 > p {
+  /* font weight for article paragraph */
+  font-weight: 400;
+}
+
+/* video page */
+/* create grid box for displayed videos */
+.featured-videos {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  border-bottom: 3px solid #333;
+  padding-top: 4.5vw;
+  align-items: center;
+  justify-content: center;
+}
+
+/* main video for the page */
+.featured-videos .video1 {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+  align-self: center;
+  border-right: 3px solid #333;
+  height: 100%;
+  padding: 2vw 2vw 2vw 2vw;
+}
+
+/* adjust size of main video to 16:9 ratio */
+.featured-videos .video1 > iframe {
+  width: 60vw;
+  height: 33.75vw;
+}
+
+/* main video title */
+.featured-videos .video1 > h1 {
+  color: #eee;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+/* place sub video to top section on the right */
+.featured-videos .video2 {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  place-self: center;
+  padding-bottom: 1vw;
+  border-bottom: 3px solid #333;
+  padding: 2vw;
+}
+
+/* adjust size to maintain 16:9 ratio */
+.featured-videos .video2 > iframe {
+  width: 33vw;
+  height: 18.5625vw;
+}
+
+/* title for sub video */
+.featured-videos .video2 > h1 {
+  color: #eee;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+/* place sub video in the bottom section the right */
+.featured-videos .video3 {
+  grid-row: 2 / 3;
+  grid-column: 2/ 3;
+  place-self: center;
+  padding: 2vw;
+}
+
+/* adjust size to main 16:9 ratio */
+.featured-videos .video3 > iframe {
+  width: 33vw;
+  height: 18.5625vw;
+}
+
+/* title for sub video */
+.featured-videos .video3 > h1 {
+  color: #eee;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+/* video section below featured videos */
+.video-section > h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #eee;
+  padding: 1vw;
+  border-bottom: 3px solid #333;
+}
+
+/* create flex box and style article */
+.video-section .video4 {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 3vw;
+  padding: 2vw 2vw 2vw 2vw;
+  border-bottom: 3px solid #333;
+  align-content: space-around;
+}
+
+/* article section */
+.video-section .video4 .wrapper4 {
+  color: #eee;
+  flex-shrink: 15;
+  /* ensure article dont overflow or becomes too big */
+  height: 18vw;
+  overflow: hidden;
+}
+
+/* remove underline and change color */
+.video-section .video4 .wrapper4 > a {
+  color: #eee;
+  text-decoration: none;
+}
+
+/* change color when hovering */
+.video-section .video4 .wrapper4 > a:hover {
+  color: #444;
+}
+
+/* adjust header */
+.video-section .video4 .wrapper4 > a > h1 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding-bottom: 1vw;
+}
+
+.video-section .video4 .wrapper4 > h1 {
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-bottom: 1vw;
+  }
+
+/* article paragraph */
+.video-section .video4 .wrapper4 > p {
+  font-weight: 400;
+}
+
+/* adjust video to fit 16:9 ratio */
+.video-section .video4 > iframe {
+  width: 33vw;
+  height: 18.5625vw;
+}
+
+/* gigi hadid video-article page */
+/* create vertical flex */
+.gigi-article {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  gap: 2vw;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 3px solid #333;
+}
+
+/* article header */
+.gigi-article > h1 {
+  color: #eee;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-top: 4.5vw;
+}
+
+/* adjust video to maintain 16:9 ratio */
+.gigi-article > iframe {
+  width: 90vw;
+  height: 50.625vw;
+}
+
+/* article paragraph */
+.gigi-article > p {
+  color: #eee;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+/* recommened videos after end of article */
+.video-next > h1 {
+  color: #eee;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-bottom: 3px solid #333;
+  padding: 1vw;
+}
+
+/* create flex box */
+.video-next .article7 {
+  display: flex;
+  padding: 2vw;
+  gap: 1vw;
+  border-bottom: 3px solid #333;
+}
+
+.video-next .article7 .wrapper7 {
+  color: #eee;
+  flex-shrink: 15;
+}
+
+.video-next .article7 .wrapper7 > h1 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding-bottom: 1vw;
+}
+
+.video-next .article7 .wrapper7 > p {
+  font-weight: 400;
+}
+
+/* maintain 16:9 ratio */
+.video-next .article7 > iframe {
+  width: 33vw;
+  height: 18.5625vw;
+}
+
+/* checkout page */
+/* checkout progress map */
+.progress-checkout-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-top: 5vw;
+}
+
+.progress-step-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* add check box */
+.step-check {
+  background-color: #444;
+  height: 2vw;
+  width: 2vw;
+  border-radius: 50%;
+  margin-bottom: 1vw;
+  background-image: url(images/green\ check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+}
+
+.progress-step-container:nth-of-type(3) .step-check::after {
+    display: none;
+}
+
+.progress-step-container:nth-of-type(3) .step-check {
+    background-image: none;
+    background-color: #eee;
+    border: 3px solid #333;
+}
+
+.progress-step-container:nth-of-type(2) .step-check::after {
+    background-color: #eee;
+}
+
+.progress-step-container:nth-of-type(2) .step-check {
+    background-image: none;
+    background-color: #eee;
+    border: 3px solid #333;
+}
+
+.step-check::after {
+    content: "";
+    width: 32vw;
+    height: 0.2vw;
+    background-color: inherit;
+    position: absolute;
+    left: 100%;
+    top: 40%;
+    transform: translateY(100%) translateY(-50%);
+}
+
+.step-title {
+    color: #444;
+}
+
+/* create flexbox for form */
+.form-container {
+    width: 100%;
+    margin-top: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vw;
+    border-bottom: 3px solid #333;
+}
+
+/* style form title */
+.form-title {
+    font-size: 2rem;
+    margin-bottom: 1vw;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* create flex for form */
+.checkout-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* single input */
+.input-line {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 2vw;
+    width: 100%;
+}
+
+/* style input label */
+label {
+    font-size: 1rem;
+    color: #eee;
+    margin-bottom: 1vw;
+}
+
+/* style for text input type */
+input[type="text"] {
+    width: 100%;
+    height: 3vw;
+    padding: 0 1vw;
+    background-color: #444;
+    border-radius: 0.5vw;
+    border: none;
+    font-size: 1rem;
+}
+
+/* style placeholder in box */
+input[type="text"]::placeholder {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* double input */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 2vw;
+    gap: 1vw;
+}
+
+/* width for double input */
+.input-container .input-line {
+    width: 40%;
+}
+
+/* style button */
+input[type="button"] {
+    background-color: #444;
+    color: #eee;
+    font-weight: 500;
+    font-size: 1rem;
+    height: 3vw;
+    padding: 0 3vw;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+/* change button color when hovering */
+input[type="button"]:hover {
+    background-color: #4CBB17;
+}
+
+/* subscription plan */
+/* container height and width */
+.sub {
+    min-height: 30vh;
+    width: 100%;
+}
+
+/* header  */
+.sub > h2 {
+    color: #eee;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 2vw 0;
+    text-align: center;
+}
+
+/* create grid for the different options */
+.price-row {
+    width: 90%;
+    max-width: 80vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+    grid-gap: 2vw;
+}
+
+/* style the individual boxes of the subscription plan */
+.price-col {
+    background: #444;
+    padding: 10% 15%;
+    border-radius: 1vw;
+    color: #eee;
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+/* make box bigger when hovering over */
+.price-col:hover {
+    transform: scale(1.05);
+}
+
+/* create green border when option selected */
+.price-col.selected {
+    transform: scale(1.1);
+    border: 3px solid #4CBB17;
+}
+
+/* header for subscription plan */
+.price-col > h1 {
+    font-size: 1.5rem;
+    background-color: #444;
+}
+
+/* style pricing for subscription */
+.price-col > h3 {
+    font-size: 2rem;
+    margin: 1vw 0 2vw;
+    font-weight: 500;
+    background-color: #444;
+}
+
+/* reduce font size for month */
+.price-col > h3 > span {
+    font-size: 1.2rem;
+    background-color: #444;
+    font-weight: 500;
+}
+
+/* style list */
+.price-col > ul
+{
+    text-align: left;
+    margin: 1vw 0;
+    color: #eee;
+    background-color: #444;
+}
+
+/* adjust margin */
+.price-col > ul > li {
+    margin: 0.5vw 0;
+    background-color: #444;
+}
+
+/* phone screens */
+@media only screen and (max-width: 560px) {
+
+    /* nav */
+    /* fit navbar to screen size */
+    .navbar {
+        max-height: 17vw;
+        max-width: 560px;
+    }
+
+    /* remove categories */
+    .navbar .categories {
+        display: none;
+    }
+
+    /* increase bar size */
+    .hamburger .bars {
+        height: 10vw;
+        width: 10vw;
+        top: 2.5vw;
+    }
+
+    /* fix spacing by increasing padding left and flex grow */
+    .navbar .logo {
+        flex-grow: 5;
+        padding-left: 8vw;
+    }
+
+    /* increase logo size */
+    .navbar .logo > a > img {
+        width: 10vw;
+        height: 8vw;
+    }
+
+    /* shift icons inline and add gap */
+    .navbar .icons {
+        display: inline-flex;
+        gap: 5vw;
+    }
+
+    /* increase icon size */
+    .navbar .icons .cart {
+        height: 8vw;
+        width: 8vw;
+    }
+
+    /* increase icon size */
+    .navbar .icons .searchbar {
+        height: 8vw;
+        width: 8vw;
+    }
+
+    /* increase icon size */
+    .navbar .icons .user {
+        height: 8vw;
+        width: 8vw;
+    }
+
+    /* increase menu to fit screen */
+    .hamburger {
+        width: 100vw;
+        left: -140vw;
+    }
+
+    /* increase cross size */
+    .hamburger .cross {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    /* increase font size and weight */
+    .hamburger > ul > li > a {
+        font-weight: 500;
+        font-size: 2rem;
+    }
+
+    /* increase top padding */
+    .hamburger > ul > li {
+        padding-top: 10vw;
+    }
+
+    /* home page */
+    /* change layout of featured article */
+    .featured {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 6fr 4fr;
+        border-bottom: 3px solid #333;
+        /* add padding according to nav bar */
+        padding-top: 18vw;
+        padding-left: 6vw;
+        align-items: center;
+        justify-content: center;
+        height: 170vw;
+    }
+
+    /* position main article */
+    /* remove border right */
+    .featured .main {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+        border-right: none;
+    }
+
+    /* new image size */
+    .featured .main > img {
+        width: 105vw;
+        height: 80vw;
+    }
+
+    /* smaller font size */
+    .featured .main > h1 {
+        font-size: 1rem;
+    }
+
+    /* position sub article on the left */
+    .featured .sub1 {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        border-bottom: none;
+        align-self: flex-start;
+    }
+
+    /* reduce font size */
+    .featured .sub1 > h1 {
+        font-size: 0.8rem;
+    }
+
+    /* adjust image to fit half screen */
+     .featured .sub1 > img {
+        width: 50vw;
+        height: 30vw;
+    }
+
+    /* position sub article on the right */
+    .featured .sub2 {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        align-self: flex-start;
+    }
+
+    /* reduce font size */
+    .featured .sub2 > h1 {
+        font-size: 0.8rem;
+    }
+
+    /* adjust image to fit half screen */
+    .featured .sub2 > img {
+        width: 50vw;
+        height: 30vw;
+    }
+
+    /* reduce header font size */
+    .latest > h1 {
+        font-size: 1.2rem;
+    }
+
+    /* change flex to column */
+    .article1
+    {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* give article specific height so it dosent grow too long */
+        height: 100vw;
+        gap: 1vw;
+        padding: 1vw;
+    }
+
+    /* adjust image to screen */
+    .article1 > a > img {
+        width: 90vw;
+        height: 50vw;
+    }
+
+    /* adjust image to screen */
+    .article1 > img {
+        width: 90vw;
+        height: 50vw;
+    }
+
+    /* hide overflow paragraph due to height */
+    .article1 .wrapper1 {
+        overflow: hidden;
+    }
+
+    /* reduce font size */
+    .article1 .wrapper1 > a > h1 {
+        font-size: 1rem;
+    }
+
+    /* reduce font size */
+    .article1 .wrapper1 > h1 {
+        font-size: 1rem;
+    }
+
+    /* reduce font size */
+     .article1 .wrapper1 > a > p {
+        font-size: 0.8rem;
+    }
+
+    /* reduce font size */
+    .article1 .wrapper1 > p {
+        font-size: 0.8rem;
+    }
+
+    /* reduce header font size */
+     .popular > h1 {
+        font-size: 1.2rem;
+    }
+
+    /* footer */
+    /* change flex direction to column */
+    .footer .container .row {
+        flex-direction: column;
+    }
+
+    /* hide content of list */
+    .footer .container .row .footer-col > ul {
+        display: none;
+        padding-left: 1vw;
+    }
+
+    /* hide content of list */
+    .footer .container .row .footer-col .social > a > i {
+        display: none;
+        padding-left: 1vw;
+    }
+
+    /* display item when footer is clicked */
+    .footer .container .row .footer-col.open > ul {
+        display: block;
+    }
+
+    /* display social tags */
+    .footer .container .row .footer-col.open .social > a > i {
+        display: inline;
+    }
+
+    /* reduce font size */
+    .footer .container .row .footer-col.open > ul > li > a {
+        font-size: 0.8rem;
+    }
+
+    /* create border for each section */
+    .footer .container .row .footer-col {
+        width: 100%;
+        border-bottom: 3px solid #333;
+    }
+
+    /* remove underline */
+    .footer .container .row .footer-col > h4::before {
+        content: none;
+    }
+
+    /* change color and cursor when hovering */
+    .footer .container .row .footer-col > h4:hover {
+        color: #333;
+        cursor: pointer;
+    }
+
+    /* article page */
+    /* reduce font size and adjust padding according to nav bar */
+    .fossil-article > h1 {
+        font-size: 1rem;
+        padding-top: 18vw;
+    }
+
+    /* increase width of carousel */
+    .fossil-article .carousel-container {
+        width: 100%;
+    }
+
+    /* reduce font size */
+    .fossil-article > p {
+        font-size: 0.8rem;
+    }
+
+     /* reduce font size */
+    .next > h1 {
+        font-size: 1rem;
+    }
+
+    /* change flex to column */
+    .article2
+    {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* give article specific height so it dosent grow too long */
+        height: 80vw;
+        gap: 1vw;
+        padding: 1vw;
+    }
+
+    /* adjust image to screen */
+    .next .article2 > img {
+        width: 90vw;
+        height: 50vw;
+    }
+
+    /* hide overflow paragraph due to height */
+    .next .article2 .wrapper2 {
+        overflow: hidden;
+    }
+
+    /* reduce font size */
+    .next .article2 .wrapper2 > h1 {
+        font-size: 1rem;
+    }
+
+    /* reduce font size */
+    .next .article2 .wrapper2 > p {
+        font-size: 0.8rem;
+    }
+
+    /* video page */
+    .featured-videos {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+         border-bottom: 3px solid #333;
+        /* add padding according to nav bar */
+        padding-top: 18vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* position main article */
+    /* remove border right */
+    .featured-videos .video1 {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+        border-right: none;
+    }
+
+    /* new video size */
+    .featured-videos .video1 > iframe {
+        width: 100vw;
+        height: 56.25vw;
+    }
+
+    /* smaller font size */
+    .featured-videos .video1 > h1 {
+        font-size: 1rem;
+    }
+
+    /* position sub video on the left */
+    .featured-videos .video2 {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        border-bottom: none;
+        align-self: flex-start;
+    }
+
+    /* reduce font size */
+    .featured-videos .video2 > h1 {
+        font-size: 0.8rem;
+    }
+
+    /* adjust video to fit half screen */
+     .featured-videos .video2 > iframe {
+        width: 50vw;
+        height: 28.125vw;
+    }
+
+    /* position sub video on the right */
+    .featured-videos .video3 {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        align-self: flex-start;
+    }
+
+    /* reduce font size */
+    .featured-videos .video3 > h1 {
+        font-size: 0.8rem;
+    }
+
+    /* adjust video to fit half screen */
+    .featured-videos .video3 > iframe {
+        width: 50vw;
+        height: 28.125vw;
+    }
+
+    /* reduce header font size */
+    .video-section > h1 {
+        font-size: 1.2rem;
+    }
+
+    /* change flex direction to column */
+    .video-section .video4 {
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    /* reduce font size */
+    .video-section .video4 .wrapper4 > a > h1 {
+        font-size: 1rem;
+    }
+
+    /* reduce font size */
+    .video-section .video4 .wrapper4 > a > p {
+        font-size: 0.8rem;
+    }
+
+    /* reduce font size */
+    .video-section .video4 .wrapper4 > h1 {
+        font-size: 1rem;
+    }
+
+    /* reduce font size */
+    .video-section .video4 .wrapper4 > p {
+        font-size: 0.8rem;
+    }
+
+    /* adjust article height */
+    .video-section .video4 .wrapper4 {
+        height: 24vw;
+        overflow: hidden;
+    }
+
+    /* adjust video size */
+    .video-section .video4 > iframe {
+        width: 100vw;
+        height: 56.25vw;
+    }
+
+    /* video-article page */
+    /* increase padding according to nav bar */
+    .gigi-article {
+        padding-top: 18vw;
+    }
+
+    /* reduce font size */
+    .gigi-article > h1 {
+        font-size: 1rem;
+    }
+
+    /* adjust video size to fit screen */
+    .gigi-article > iframe {
+        width: 100vw;
+        height: 56.25vw;
+    }
+
+    /* reduce font size */
+    .gigi-article > p {
+        font-size: 0.8rem;
+    }
+
+    /* reduce font size */
+    .video-next > h1 {
+        font-size: 1rem;
+    }
+
+    .video-next .article7 {
+        flex-direction: column;
+        gap: 2vw;
+    }
+
+    /* reduce font size */
+    .video-next .article7 .wrapper7 > h1 {
+        font-size: 1rem;
+    }
+
+    /* reduce font size */
+    .video-next .article7 .wrapper7 > p {
+        font-size: 0.8rem;
+    }
+
+    /* adjust article height */
+    .video-next .article7 .wrapper7 {
+        height: 30vw;
+        overflow: hidden;
+    }
+
+    /* adjust video size */
+    .video-next .article7 > iframe {
+        width: 100vw;
+        height: 56.25vw;
+    }
+
+    /* checkout page */
+    /* increase padding accroding to nav bar */
+    .progress-checkout-container {
+        padding-top: 20vw;
+    }
+
+    /* increase size of circle */
+    .step-check {
+        height: 8vw;
+        width: 8vw;
+    }
+
+    /* decrease font size */
+    .step-title {
+        font-size: 1rem;
+    }
+
+    /* decrease font size */
+    .sub > h2 {
+        font-size: 1rem;
+    }
+
+    /* make subscription column flex */
+    .sub .price-row {
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    /* increase height of input bar */
+    input[type="text"] {
+        height: 8vw;
+    }
+
+    /* change double input bars to single input bar */
+    .input-container {
+        flex-direction: column;
+    }
+
+    /* place label in the center */
+    .input-line > label {
+        place-self: center;
+    }
+
+    /* increase padding at he bottom of confirm button */
+    input[type="button"] {
+        padding-bottom: 10vw;
+    }
+}

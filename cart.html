@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cart</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <header>
+      <!-- div class for navigation for styling -->
+      <div class="navbar">
+        <!-- logo image -->
+        <div class="logo">
+          <a href="index.html"
+            ><img src="images/book logo.png" alt="website logo"
+          /></a>
+        </div>
+        <!-- different sections for navigation bar -->
+        <ul class="categories">
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="#">Releases</a></li>
+        </ul>
+        <!-- icons on the right of navigation bar -->
+        <div class="icons">
+          <svg
+            class="user"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
+          <a href="cart.html"
+            ><svg
+              class="cart"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+              />
+            </svg>
+          </a>
+          <svg
+            class="searchbar"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+        </div>
+      </div>
+      <!-- hamburger icon -->
+      <div class="hamburger">
+        <svg
+          class="bars"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+        <svg
+          class="cross"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+
+        <!-- slide out menu -->
+        <ul data-visible="false">
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="#">Releases</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- progress list -->
+    <div class="progress-checkout-container">
+      <div class="progress-step-container">
+        <div class="step-check"></div>
+        <span class="step-title">Cart</span>
+      </div>
+      <div class="progress-step-container">
+        <div class="step-check"></div>
+        <span class="step-title">Address</span>
+      </div>
+      <div class="progress-step-container">
+        <div class="step-check"></div>
+        <span class="step-title">Payment</span>
+      </div>
+    </div>
+
+    <!-- subscription plan -->
+    <div class="sub">
+      <h2>Choose Your Subscription Plan</h2>
+      <div class="price-row">
+        <div class="price-col">
+          <h1>6 Months</h1>
+          <h3>$5 <span>/ month</span></h3>
+          <ul>
+            <li>Digital Print Access</li>
+            <li>Print Edition</li>
+          </ul>
+        </div>
+        <div class="price-col">
+          <h1>1 Year</h1>
+          <h3>$4 <span>/ month</span></h3>
+          <ul>
+            <li>Digital Print Access</li>
+            <li>Print Edition</li>
+          </ul>
+        </div>
+        <div class="price-col">
+          <h1>2 Years</h1>
+          <h3>$3 <span>/ month</span></h3>
+          <ul>
+            <li>Digital Print Access</li>
+            <li>Print Edition</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- personal details form -->
+    <div class="form-container">
+      <h2 class="form-title">Personal Details</h2>
+      <form action="" class="checkout-form">
+        <div class="input-container">
+          <label for="fname">First Name</label>
+          <input type="text" name="fname" id="fname" placeholder="first name" />
+          <label for="lname">Last Name</label>
+          <input type="text" name="lname" id="lname" placeholder="last name" />
+        </div>
+        <div class="input-line">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="...@gmail.com"
+          />
+        </div>
+        <div class="input-line">
+          <label for="address">Street Address</label>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="street address"
+          />
+        </div>
+        <div class="input-container">
+          <label for="country">Country</label>
+          <input
+            type="text"
+            name="country"
+            id="country"
+            placeholder="Singapore"
+          />
+          <label for="city">City</label>
+          <input type="text" name="city" id="city" placeholder="Singapore" />
+        </div>
+        <div class="input-container">
+          <label for="apt">Apartment Number</label>
+          <input type="text" name="apt" id="apt" placeholder="#05-888" />
+          <label for="pc">Postal Code</label>
+          <input type="text" name="pc" id="pc" placeholder="123456" />
+        </div>
+      </form>
+    </div>
+
+    <!-- payment form -->
+    <div class="form-container">
+      <h2 class="form-title">Payment Details</h2>
+      <form action="" class="checkout-form">
+        <div class="input-line">
+          <label for="name">Name On Card</label>
+          <input type="text" name="name" id="name" placeholder="Name" />
+        </div>
+        <div class="input-line">
+          <label for="card">Card Number</label>
+          <input
+            type="text"
+            maxlength="16"
+            name="card"
+            id="card"
+            placeholder="XXXXXXXXXXXXXXXX"
+          />
+        </div>
+        <div class="input-container">
+          <label for="date">Expiry Date</label>
+          <input
+            type="text"
+            maxlength="5"
+            name="date"
+            id="date"
+            placeholder="MM/YY"
+          />
+          <label for="cvc">CVC</label>
+          <input
+            type="text"
+            maxlength="3"
+            name="cvc"
+            id="cvc"
+            placeholder="***"
+          />
+        </div>
+      </form>
+      <input
+        type="button"
+        value="Confirm Purchase"
+        aria-label="Confirm Purchase"
+      />
+    </div>
+
+    <!-- create footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Sections</h4>
+            <ul>
+              <li><a href="#">Latest</a></li>
+              <li><a href="#">Popular</a></li>
+              <li><a href="videos.html">Video</a></li>
+              <li><a href="#">Releases</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Brands</h4>
+            <ul>
+              <li><a href="#">Brand Rankings</a></li>
+              <li><a href="#">Brand Directory</a></li>
+              <li><a href="#">HypeIndex</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Store</h4>
+            <ul>
+              <li><a href="#">HBX</a></li>
+              <li><a href="#">SSENSE</a></li>
+              <li><a href="#">GRAILED</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Corporate News</a></li>
+              <li><a href="#">Jobs</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

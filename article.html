@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Fossil Article</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navigation bar -->
+    <header>
+      <!-- div class for navigation for styling -->
+      <div class="navbar">
+        <!-- logo image -->
+        <div class="logo">
+          <a href="index.html"
+            ><img src="images/book logo.png" alt="website logo"
+          /></a>
+        </div>
+        <!-- different sections for navigation bar -->
+        <ul class="categories">
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="#">Releases</a></li>
+        </ul>
+        <!-- icons on the right of navigation bar -->
+        <div class="icons">
+          <svg
+            class="user"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
+          <a href="cart.html"
+            ><svg
+              class="cart"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+              />
+            </svg>
+          </a>
+          <svg
+            class="searchbar"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+        </div>
+      </div>
+      <!-- hamburger icon -->
+      <div class="hamburger">
+        <svg
+          class="bars"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+        <svg
+          class="cross"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+
+        <!-- slide out menu -->
+        <ul data-visible="false">
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="#">Releases</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- create fossil article -->
+    <article class="fossil-article">
+      <!-- article title -->
+      <h1>Fossil Introduces The New Fossil XTZ Timepiece</h1>
+      <!-- create carousel -->
+      <div class="carousel-container">
+        <!-- slide left button for carousel which is hidden at default-->
+        <button class="carousel-button-left is-hidden" aria-label="left">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </button>
+        <!-- images for carousel -->
+        <div class="carousel-slider">
+          <ul>
+            <li class="current-slide">
+              <img
+                src="images/fossil watch.jpg"
+                alt="image of latest fossil1"
+              />
+            </li>
+            <li>
+              <img src="images/fossil2.jpg" alt="image of latest fossil2" />
+            </li>
+            <li>
+              <img src="images/fossil3.jpg" alt="image of latest fossil3" />
+            </li>
+            <li>
+              <img src="images/fossil4.jpg" alt="image of latest fossil4" />
+            </li>
+          </ul>
+        </div>
+        <!-- slide right button for carousel -->
+        <button class="carousel-button-right" aria-label="right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+        <!-- dots to track carousel slide -->
+        <div class="carousel-nav">
+          <button class="current-slide"></button>
+          <button></button>
+          <button></button>
+          <button></button>
+        </div>
+      </div>
+      <!-- article paragraph -->
+      <p>
+        Fossil, a renowned name in the world of horology, has once again taken
+        the watch industry by storm with its latest offering - the Fossil XTZ
+        Timepiece. This eagerly awaited addition to their collection has already
+        generated significant buzz among watch enthusiasts and fashion
+        aficionados alike. The Fossil XTZ is set to redefine what a modern
+        timepiece can be, combining cutting-edge technology with timeless
+        design.
+      </p>
+      <p>
+        One of the standout features of the Fossil XTZ Timepiece is its
+        exceptional build quality. Crafted with precision and attention to
+        detail, the watch boasts a durable stainless steel case and bracelet
+        that exude elegance and robustness. Its scratch-resistant sapphire
+        crystal ensures that the watch face remains pristine, even after years
+        of daily wear. The design is sleek and minimalist, making it a versatile
+        accessory suitable for both formal occasions and everyday wear. Fossil's
+        commitment to quality and craftsmanship shines through in every aspect
+        of the XTZ Timepiece.
+      </p>
+      <p>
+        Beyond its stunning exterior, the Fossil XTZ is a true technological
+        marvel. It comes equipped with a range of smart features, including
+        fitness tracking, notifications, and compatibility with popular mobile
+        platforms. This means you can stay connected and organized on the go
+        while still enjoying the timeless appeal of a classic wristwatch. With
+        its impressive battery life and water-resistant design, the Fossil XTZ
+        is not just a fashion statement; it's a practical and reliable companion
+        for modern life. Fossil has once again proven that they are at the
+        forefront of innovation in the watch industry with the introduction of
+        the XTZ Timepiece, a must-have for anyone seeking the perfect blend of
+        style and functionality.
+      </p>
+    </article>
+    <!-- add carousel javascript -->
+    <script src="carousel.js"></script>
+
+    <!-- recommended articles -->
+    <div class="next">
+      <!-- section title -->
+      <h1>Recommended</h1>
+      <!-- articles -->
+      <article class="article2">
+        <img src="images/apple watch.jpg" alt="image of new apple watch" />
+        <div class="wrapper2">
+          <h1>Apple Teases New Apple Watch Releasing Late October</h1>
+          <p>
+            Apple enthusiasts and tech aficionados around the world are eagerly
+            anticipating the release of the next-generation Apple Watch, as the
+            tech giant has officially teased its arrival in late October. Apple
+            has a history of setting industry standards for smartwatches, and
+            this latest announcement is expected to be no different. With each
+            iteration, the Apple Watch has brought new features and
+            improvements, making it an indispensable accessory for many. While
+            details about the new Apple Watch remain shrouded in secrecy, the
+            mere announcement of its impending release has sparked excitement
+            and speculation. Apple's commitment to innovation and user-friendly
+            design has been a driving force behind the success of the Apple
+            Watch, and consumers are keen to see what groundbreaking features
+            the company will introduce this time. Whether it's enhanced health
+            and fitness tracking, improved battery life, or a stunning new
+            design, Apple enthusiasts can't wait to get their hands on the
+            latest wearable technology.
+          </p>
+        </div>
+      </article>
+      <article class="article2">
+        <img src="images/rolex watch.jpg" alt="new rolex watch" />
+        <div class="wrapper2">
+          <h1>Rolex Intoduces the Ultimate Timepiece</h1>
+          <p>
+            In the world of luxury watches, few names carry as much prestige and
+            recognition as Rolex. Now, the iconic Swiss watchmaker has
+            introduced what can only be described as the "Ultimate Timepiece."
+            While Rolex has always been synonymous with elegance, craftsmanship,
+            and precision, this new addition to their collection is poised to
+            set new standards for what a wristwatch can achieve. The details
+            surrounding this timepiece remain closely guarded secrets, but Rolex
+            enthusiasts and collectors alike are abuzz with anticipation.
+            Rolex's dedication to innovation, coupled with their storied history
+            of crafting exceptional timepieces, suggests that this "Ultimate
+            Timepiece" will be nothing short of extraordinary. Whether it boasts
+            groundbreaking complications, exquisite materials, or an entirely
+            unique design, Rolex's reputation for excellence leaves no room for
+            doubt that this watch will be a game-changer in the luxury watch
+            industry.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- create footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Sections</h4>
+            <ul>
+              <li><a href="#">Latest</a></li>
+              <li><a href="#">Popular</a></li>
+              <li><a href="videos.html">Video</a></li>
+              <li><a href="#">Releases</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Brands</h4>
+            <ul>
+              <li><a href="#">Brand Rankings</a></li>
+              <li><a href="#">Brand Directory</a></li>
+              <li><a href="#">HypeIndex</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Store</h4>
+            <ul>
+              <li><a href="#">HBX</a></li>
+              <li><a href="#">SSENSE</a></li>
+              <li><a href="#">GRAILED</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Corporate News</a></li>
+              <li><a href="#">Jobs</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
